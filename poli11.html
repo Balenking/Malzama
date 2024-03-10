@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <title>Hamburger Overlay Navigation Drawer Example</title>
+  </head>
+  <body>
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <ul>
+             <li><a href="index.html" style="color:white">سەرەکی</a></li>
+             <li><a href="poli7.html"style="color:white">پۆلی ٧</a></li>
+             <li><a href="poli8.html"style="color:white">پۆلی ٨</a></li>
+             <li><a href="poli9.html"style="color:white">پۆلی ٩</a></li>
+             <li><a href="poli10.html"style="color:white">پۆلی ١٠</a></li>
+             <li><a href="poli10w.html"style="color:white"> پۆلی ١٠ی وێژەی</a></li>
+             <li><a href="#"style="color:white">پۆلی ١١</a></li>
+             <li><a href="poli11w.html"style="color:white">پۆلی ١١ وێژەی</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="div" style="background-color: #88AB8E; border-radius: 20px;height:60px;display:flex;align-items: center;justify-content: center;margin-top:50px; ">
+        <a href="">پۆلی یازدەیەم</a>
+      </div>
+      <div class="div" style="background-color: #88AB8E;;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;">
+       <a href="https://drive.google.com/file/d/1yHPHMOya7KrKr0ksTlMOpfOgFCirVsMP/view?pli=1">کوردی</a>
+      </div>
+      
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center; margin-top:15px">
+        <a href="https://drive.google.com/file/d/1egbDW2tcjABpA1GhVq75jzew0oSeACib/view??pli=1">کوردی وەرزی دووەم</a>
+      </div>
+      
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/1139J3A1DqMlneYkIqi3chhQSUOFURFX-/view??pli=1">ئینگلیزی</a>
+      </div>
+      
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/1OHaSl2wibfDXHnn8cQhccbRkYFSBW0re/view??pli=1">عەرەبی</a>
+      </div>
+      
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/128pLCU5wsUSlA7UmaNgSZSNRhHHPWGPO/view??pli=1">بیرکاری</a>
+      </div>
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/1xhRO0wOjr03PQ4wGNgqIR5Ob649P3hug/view?pli=1">بیرکاری وەرزی دووەم</a>
+      </div>
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/12kDqGHlJGbq-mxZ1npHmOUmeHpPiS0oX/view??pli=1">زیندەزانی</a>
+      </div>
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+        <a href="https://drive.google.com/file/d/1rCAdKV4JjHQ8t9GJjlcec7RjVGu388MD/view??pli=1">فیزییا</a>
+      </div>
+      <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px;margin-bottom:20px">
+        <a href="https://drive.google.com/file/d/1g-rzl6zwojyNUyffpDStmqPFQuwx8jOg/view??pli=1">کیمیا</a>
+      </div>
+      <div class="loaderContainer">
+         <div class="loader"></div>
+
+      </div>
+      
+      <script>
+        let loader =document.querySelector('.loader');
+        let divs = [...document.querySelectorAll('.div > a')];
+        divs.forEach((div) => {
+          div.addEventListener('click', ()=> {
+            loader.classList.add('clicked');
+            let i = 0;
+            let a = setInterval(() => {
+              if(i > 2) {
+                clearInterval(a);
+              }
+              loader.classList.remove('clicked');
+              i++;
+            },3000);
+            
+            
+          });
+          
+          
+        })
+        
+      </script>
+      
+      
+      
+  </body>
+</html>

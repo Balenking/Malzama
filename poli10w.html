@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+  <title>Hamburger Overlay Navigation Drawer Example</title>
+</head>
+
+<body>
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler" />
+    <div class="hamburger">
+      <div></div>
+    </div>
+    <div class="menu">
+      <div>
+        <ul>
+          <li><a href="index.html" style="color:white">سەرەکی</a></li>
+          <li><a href="poli7.html" style="color:white">پۆلی ٧</a></li>
+          <li><a href="poli8.html" style="color:white">پۆلی ٨</a></li>
+          <li><a href="poli9.html" style="color:white">پۆلی ٩</a></li>
+          <li><a href="poli10.html" style="color:white">پۆلی ١٠</a></li>
+          <li><a href="#" style="color:white"> پۆلی ١٠ی وێژەی</a></li>
+          <li><a href="poli11.html" style="color:white">پۆلی ١١</a></li>
+          <li><a href="poli11w.html" style="color:white">پۆلی ١١ وێژەی</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div" style="background-color: #88AB8E; border-radius: 20px;height:60px;display:flex;align-items: center;justify-content: center;margin-top:50px; ">
+    <a href="">پۆلی دەیەمی وێژەی </a>
+  </div>
+  <div class="div" style="background-color: #88AB8E;;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;">
+    <a href="https://drive.google.com/file/d/1QZRufmFixpI-nFAyLnLJ0xMOHO1ko6cy/view?pli=1">ئاین</a>
+  </div>
+
+  <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center; margin-top:15px">
+    <a href="https://drive.google.com/file/d/1FIRZ8PmKfQH8WZz85vWrcANdKSZtmFO3/view?pli=1">کوردی</a>
+  </div>
+
+  <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+    <a href="https://drive.google.com/file/d/1RBb39dv2IChVh22BeIJJCqn3FMuPYLv1/view?pli=1">ئینگلیزی ئیپسۆد</a>
+  </div>
+
+  <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+    <a href="https://drive.google.com/file/d/18P5f7K1FEfMufNjrumBrQZvYnuKReVYH/view?pli=1">ئینگلیزی</a>
+  </div>
+
+  <div class="div" style="background-color: #88AB8E;height:60px;border-radius: 20px;display:flex;align-items: center;justify-content: center;margin-top: 15px">
+    <a href="https://drive.google.com/file/d/1t68x80Ts2BORCJo8qF8z9e16kmQgwjhg/view?pli=1">عەرەبی</a>
+  </div>
+  
+
+  <div class="loaderContainer">
+    <div class="loader"></div>
+
+  </div>
+
+  <script>
+    let loader = document.querySelector('.loader');
+    let divs = [...document.querySelectorAll('.div > a')];
+    divs.forEach((div) => {
+      div.addEventListener('click', () => {
+        loader.classList.add('clicked');
+        let i = 0;
+        let a = setInterval(() => {
+          if (i > 2) {
+            clearInterval(a);
+          }
+          loader.classList.remove('clicked');
+          i++;
+        }, 3000);
+
+
+      });
+
+
+    })
+  </script>
+
+
+
+</body>
+
+</html>
