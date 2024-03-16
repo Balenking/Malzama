@@ -27,18 +27,22 @@ main {
 
 
 .div{
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 20px;
-  color: white;
-  
-  
+     color: snow;
+    background-color: #88AB8E; 
+    border-radius: 20px;
+    height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px;
+    margin-top:30px;
   
 }
 
 
-
+.list li a {
+  color:white !important;
+}
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -293,4 +297,17 @@ a {
   place-items: center;
   
   
+}
+
+.header{
+  position: sticky;
+  top: 13px;
+  left: 8px;
+  background-color: #88AB8E; 
+  border-radius: 20px;
+  height:60px;
+  color: snow;
+  width: 95%;
+  display:grid;
+  place-items: center;
 }
